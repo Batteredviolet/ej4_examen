@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('./partials/head.ejs') %>
+<body>
+    <header>
+        <h1>Productos</h1>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+    </header>
+    <%- include('./partials/nav.ejs') %>
+    <main>
+        <table>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                </tr>
+            <% myArray.forEach(product => { %>
+                <tr>
+                    <td><%= product.nombre %></td>
+                    <td><%= product.precio %></td>
+                </tr>
+           <% }); %>
+
+        </table>
+    </main>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>
